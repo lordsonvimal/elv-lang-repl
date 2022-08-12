@@ -1,0 +1,21 @@
+{
+  "name": "vite-solidjs-with-hmr",
+  "version": "0.0.0",
+  "description": "Using https://github.com/solidjs/templates \n\n$ yarn global add codesandbox\n$ npx degit solidjs/templates/ts my-solid-project\n$ cd my-solid-project/\n$ codesandbox .\n\n# edit vite cofnig to make HMR to work",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.5.4",
+    "vite": "^2.7.10",
+    "vite-plugin-solid": "^2.2.1"
+  },
+  "dependencies": {
+    "solid-js": "^1.3.2"
+  },
+  "keywords": []
+}
