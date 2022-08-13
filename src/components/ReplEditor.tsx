@@ -39,7 +39,7 @@ print(loopFib);
 `
 
 function ReplEditor() {
-  const [log, setLog] = createSignal([])
+  const [log, setLog] = createSignal([] as any[])
   const [program, setProgram] = createSignal(sampleProgram)
   
   const editorParent = <div class="editorParent"></div> as Element
@@ -50,11 +50,16 @@ function ReplEditor() {
     }
   }
 
-  const logger = (res: string | number | Object | undefined | null) => {
-    let parsedRes = res
-    if (isNil(res) || res === undefined || res === null) parsedRes = "nil"
-    if (typeof res === "string") parsedRes = `"${res}"`
-    if (Array.isArray(res)) parsedRes = res.join(",")
+  const logger = (...args: any[]) => {
+    let parsedRes = ""
+    args.forEach((res: any) => {
+      if (isNil(res) || res === undefined || res === null) parsedRes += "nil"
+      else if (typeof res === "string") parsedRes += res
+      else if (Array.isArray(res)) parsedRes += res.join(",")
+      else if (res === false) parsedRes += "false"
+      else if (res === true) parsedRes += "true"
+      else parsedRes += `${res}`
+    })
     const logs = [...log(), parsedRes]
     setLog(logs)
   }
@@ -65,7 +70,7 @@ function ReplEditor() {
       const globals = getGlobalScope(logger)
       const res = elv(ast, globals)
       logger(res)
-    } catch(e) {
+    } catch(e: any) {
       logger(e.message)
     }
   }
