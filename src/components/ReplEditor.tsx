@@ -1,7 +1,7 @@
 import { createSignal, For, onMount } from "solid-js"
 import { basicSetup, EditorView } from "codemirror"
 import { ViewUpdate } from "@codemirror/view"
-import { elv, isNil, parser, Scope } from "../assets/elv-lang.es.js"
+import { elv, isNil, parser, Scope } from "../lib/elv-lang.es.js"
 import "../styles/ReplEditor.scss"
 
 function getGlobalScope(logger: Function) {
