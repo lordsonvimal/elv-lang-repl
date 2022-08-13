@@ -6,10 +6,10 @@ import "../styles/ReplEditor.scss"
 
 function getGlobalScope(logger: Function) {
   return new Scope({
-    print(...args) {
+    print(...args: any) {
       logger(...args)
     },
-    printToConsole(...args) { console.log(...args) }
+    printToConsole(...args: any) { console.log(...args) }
   })
 }
 
