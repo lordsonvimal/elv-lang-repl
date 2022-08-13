@@ -6,12 +6,10 @@ import styles from "./styles/App.module.css"
 const App: Component = () => {
 
   return (
-    <main>
-      <header class={styles.header}>
-        <h1 class={styles.headerText}>Elv lang REPL</h1>
-      </header>
+    <>
+      <header><h1 class={styles.headerText}>Elv lang REPL</h1></header>
       <ReplEditor />
-    </main>
+    </>
   );
 };
 

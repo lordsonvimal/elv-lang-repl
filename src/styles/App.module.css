@@ -1,7 +1,4 @@
 .headerText {
-  text-align: center;
-}
-
-.header {
   color: var(--main-text-color);
+  text-align: center;
 }

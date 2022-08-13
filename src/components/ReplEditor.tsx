@@ -89,18 +89,20 @@ function ReplEditor() {
   })
 
   return (
-    <section class="editorContainer">
+    <main class="main">
       <div class="buttons">
         <button onClick={runProgram}>Run</button>
         <button onClick={() => setLog([])}>Clear</button>
       </div>
-      {editorParent}
-      <section class="editorConsole">
-        <For each={log()}>
-          {item => <div>{item}</div>}
-        </For>
+      <section class="editorContainer">
+        {editorParent}
+        <div class="editorConsole">
+          <For each={log()}>
+            {item => <div><code>{item}</code></div>}
+          </For>
+        </div>
       </section>
-    </section>
+    </main>
   )
 }
 
