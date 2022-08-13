@@ -1,16 +1,49 @@
 .editorContainer {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr 1fr;
   padding: 8px;
 }
 
-.editorParent {
-  background-color: var(--main-bg-color);
-  border: 1px solid black;
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.editorParent,
+.editorConsole {
+  background-color: var(--section-bg-color);
+  color: var(--section-text-color);
   border-radius: 3px;
   overflow: auto;
   position: relative;
-  height: 500px;
+  height: 400px;
+
+  .cm-editor {
+    height: 100%;
+
+    .cm-gutter {
+      background-color: var(--section-bg-color);
+      color: var(--section-text-color);
+    }
+
+    .cm-activeLineGutter,
+    .cm-activeLine {
+      background-color: var(--section-bg-contrast-color);
+      color: var(--section-text-contrast-color);
+    }
+
+    .cm-selectionBackground {
+      background-color: var(--section-bg-em-color);
+    }
+  }
 }
 
-.editorParent .cm-editor {
-  height: 100%;
+.editorConsole {
+  color: var(--section-text-color);
+  padding: 8px;
+  font-size: 12px;
 }

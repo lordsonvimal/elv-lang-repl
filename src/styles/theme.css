@@ -1,9 +1,19 @@
 :root {
   --main-bg-color: #eeeeee;
   --main-text-color: #333333;
+  --section-bg-color: #aaaaaa;
+  --section-text-color: #333333;
+  --section-bg-em-color: #ffffff;
+  --section-bg-contrast-color: #485159;
+  --section-text-contrast-color: #eeeeee;
 }
 
 .dark {
   --main-bg-color: #333333;
   --main-text-color: #eeeeee;
+  --section-bg-color: #111111;
+  --section-text-color: #eeeeee;
+  --section-bg-em-color: #333333;
+  --section-bg-contrast-color: #aaaaaa;
+  --section-text-contrast-color: #333333;
 }
