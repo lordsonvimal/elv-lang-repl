@@ -20,6 +20,7 @@
   border-radius: 3px;
   overflow: auto;
   position: relative;
+  height: 350px;
 
   .cm-editor {
     height: 100%;
@@ -57,5 +58,10 @@
   .editorContainer {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+  }
+
+  .editorParent,
+  .editorConsole {
+    height: 500px;
   }
 }
