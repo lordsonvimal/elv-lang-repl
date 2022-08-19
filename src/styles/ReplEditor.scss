@@ -21,31 +21,29 @@
   overflow: auto;
   position: relative;
   height: 350px;
-
-  .cm-editor {
-    height: 100%;
-
-    .cm-gutter {
-      background-color: var(--section-bg-color);
-      color: var(--section-text-color);
-    }
-
-    .cm-activeLineGutter,
-    .cm-activeLine {
-      background-color: var(--section-bg-contrast-color);
-      color: var(--section-text-contrast-color);
-    }
-
-    .cm-selectionBackground {
-      background-color: var(--section-bg-em-color);
-    }
-  }
 }
 
-.editorParent {
-  * {
-    transition: none;
-  }
+.editorParent .cm-editor {
+  height: 100%;
+}
+
+.cm-editor .cm-gutter {
+  background-color: var(--section-bg-color);
+  color: var(--section-text-color);
+}
+
+.cm-editor .cm-activeLineGutter,
+.cm-editor .cm-activeLine {
+  background-color: var(--section-bg-contrast-color);
+  color: var(--section-text-contrast-color);
+}
+
+.cm-editor .cm-selectionBackground {
+  background-color: var(--section-bg-em-color);
+}
+
+.editorParent * {
+  transition: none;
 }
 
 .editorConsole {

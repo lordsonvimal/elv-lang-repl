@@ -98,7 +98,7 @@ function ReplEditor() {
         {editorParent}
         <div class="editorConsole">
           <For each={log()}>
-            {item => <div><code>{item}</code></div>}
+            {item => <div class="consoleItem"><code>{item}</code></div>}
           </For>
         </div>
       </section>
